@@ -2,12 +2,12 @@
  *  Copyright 2021, Othmar Ehrhardt <othmar.ehrhardt@t-online.de>, 
  *                  https://astro.stroblhof-oberrohrbach.de
  * 
- *  This file is part of the TargetBridge project.
+ *  This file is part of the TelescopeMountBackslashMeasurement project.
  *
- *  TargetBridge is licensed under the Code Project Open License (CPOL) 1.02.
+ *  TelescopeMountBackslashMeasurement is licensed under the Code Project Open License (CPOL) 1.02.
  *  
- *  You should have received a copy CPOL License
- *  along with TargetBridge.  If not, see <https://www.codeproject.com/info/cpol10.aspx>.
+ *  You should have received a copy of the CPOL License
+ *  along with TelescopeMountBackslashMeasurement.  If not, see <https://www.codeproject.com/info/cpol10.aspx>.
  * 
  * 
  * Some code used from:
