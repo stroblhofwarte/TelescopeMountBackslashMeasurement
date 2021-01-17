@@ -24,7 +24,7 @@ Step 3:
 Press "set reference" and click on the reference point in your image, a yellow cross appears.
 
 Step 4: 
-Press the telescope move button, the scope will move and return back.
+Press the telescope move button, the scope will move and return back (the mount is unparked if it is parked).
 
 Step 5:
 Take a picture, this picture will be shifted regarding the backslash of the mount.
