@@ -106,6 +106,7 @@
     <Content Include="Beteigeuze_Spectrum_-20.00_0.30s_0000.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Telescope.png" />
     <None Include="Resources\On1.png" />
     <None Include="Resources\On.png" />
     <None Include="Resources\Stop.png" />
