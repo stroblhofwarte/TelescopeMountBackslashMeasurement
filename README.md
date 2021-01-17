@@ -44,7 +44,7 @@ The branch is marked (yellow cross).
 ![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen3.png)
 The branch is re-marked after the telescope move. The X difference is 71.49'' and Y 36.01''. 
 
-I filled this into the mount settings tab (ASCOM) and from this point the "branch" returns back to the old position! 
+Fill this into the mount settings tab (ASCOM) and from this point the "branch" returns back to the old position! 
 
 # Development
 
