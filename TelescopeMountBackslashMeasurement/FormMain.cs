@@ -1,22 +1,21 @@
 ﻿/*
+ *  Copyright 2021, Othmar Ehrhardt <othmar.ehrhardt@t-online.de>, 
+ *                  https://astro.stroblhof-oberrohrbach.de
  * 
- * 
- * 
- * 
- * 
- * 
- * 
+ *  This file is part of the TargetBridge project.
+ *
+ *  TargetBridge is licensed under the Code Project Open License (CPOL) 1.02.
+ *  
+ *  You should have received a copy CPOL License
+ *  along with TargetBridge.  If not, see <https://www.codeproject.com/info/cpol10.aspx>.
  * 
  * 
  * Some code used from:
  * PictureBox, JohnWillemse <https://www.codeproject.com/Articles/21097/PictureBox-Zoom>
  * 30 Oct 2007, CPOL
+ * void ResizeAndDisplayImage(), void UpdateZoomedImage(MouseEventArgs e),  
+ * void picImage_MouseMove(object sender, MouseEventArgs e), void trbZoomFactor_ValueChanged(object sender, EventArgs e)
  *
- * 
- * 
- * 
- * 
- * 
  */
 
 using ASCOM.DriverAccess;
