@@ -35,6 +35,12 @@ The value of "Difference X:" and "Difference Y:" gives you the backslash values 
 DEC axis (remember the precondition step which axis is RA and which is DEC). Fill this values in the
 mount setup (e.g. OnStep supports this) and repeat this steps to check if your backslash is gone.
 
+![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen1.png)
+
+![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen2.png)
+
+
+![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen3.png)
 
 # Development
 
