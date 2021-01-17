@@ -34,13 +34,7 @@ namespace TelescopeMountBackslashMeasurement
             this.labelCamera = new System.Windows.Forms.Label();
             this.textBoxExposure = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxLoop = new System.Windows.Forms.CheckBox();
             this.backgroundWorkerExposure = new System.ComponentModel.BackgroundWorker();
-            this.picZoom = new System.Windows.Forms.PictureBox();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.buttonExposure = new System.Windows.Forms.Button();
-            this.buttonCameraConnect = new System.Windows.Forms.Button();
-            this.buttonMountConnect = new System.Windows.Forms.Button();
             this.labelMount = new System.Windows.Forms.Label();
             this.buttonChooseMount = new System.Windows.Forms.Button();
             this.trbZoomFactor = new System.Windows.Forms.TrackBar();
@@ -63,10 +57,21 @@ namespace TelescopeMountBackslashMeasurement
             this.label8 = new System.Windows.Forms.Label();
             this.labelDiffDEC = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picZoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.buttonMountConnect = new System.Windows.Forms.Button();
+            this.picZoom = new System.Windows.Forms.PictureBox();
+            this.buttonExposure = new System.Windows.Forms.Button();
+            this.buttonCameraConnect = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonExposure2 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trbZoomFactor)).BeginInit();
             this.panelScrollArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZoom)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonChooseCamera
@@ -112,78 +117,6 @@ namespace TelescopeMountBackslashMeasurement
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Exposure [s]:";
-            // 
-            // checkBoxLoop
-            // 
-            this.checkBoxLoop.AutoSize = true;
-            this.checkBoxLoop.Location = new System.Drawing.Point(13, 81);
-            this.checkBoxLoop.Name = "checkBoxLoop";
-            this.checkBoxLoop.Size = new System.Drawing.Size(50, 17);
-            this.checkBoxLoop.TabIndex = 5;
-            this.checkBoxLoop.Text = "Loop";
-            this.checkBoxLoop.UseVisualStyleBackColor = true;
-            // 
-            // picZoom
-            // 
-            this.picZoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picZoom.Location = new System.Drawing.Point(520, 424);
-            this.picZoom.Name = "picZoom";
-            this.picZoom.Size = new System.Drawing.Size(268, 238);
-            this.picZoom.TabIndex = 8;
-            this.picZoom.TabStop = false;
-            // 
-            // picImage
-            // 
-            this.picImage.Location = new System.Drawing.Point(13, 3);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(363, 530);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picImage.TabIndex = 7;
-            this.picImage.TabStop = false;
-            this.picImage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picImage_MouseClick);
-            this.picImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picImage_MouseMove);
-            // 
-            // buttonExposure
-            // 
-            this.buttonExposure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
-            this.buttonExposure.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
-            this.buttonExposure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExposure.ForeColor = System.Drawing.Color.Silver;
-            this.buttonExposure.Image = ((System.Drawing.Image)(resources.GetObject("buttonExposure.Image")));
-            this.buttonExposure.Location = new System.Drawing.Point(13, 114);
-            this.buttonExposure.Name = "buttonExposure";
-            this.buttonExposure.Size = new System.Drawing.Size(100, 23);
-            this.buttonExposure.TabIndex = 6;
-            this.buttonExposure.UseVisualStyleBackColor = false;
-            this.buttonExposure.Click += new System.EventHandler(this.buttonExposure_Click);
-            // 
-            // buttonCameraConnect
-            // 
-            this.buttonCameraConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCameraConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
-            this.buttonCameraConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
-            this.buttonCameraConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCameraConnect.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Off;
-            this.buttonCameraConnect.Location = new System.Drawing.Point(748, 29);
-            this.buttonCameraConnect.Name = "buttonCameraConnect";
-            this.buttonCameraConnect.Size = new System.Drawing.Size(40, 23);
-            this.buttonCameraConnect.TabIndex = 2;
-            this.buttonCameraConnect.UseVisualStyleBackColor = false;
-            this.buttonCameraConnect.Click += new System.EventHandler(this.buttonCameraConnect_Click);
-            // 
-            // buttonMountConnect
-            // 
-            this.buttonMountConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMountConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
-            this.buttonMountConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
-            this.buttonMountConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMountConnect.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Off;
-            this.buttonMountConnect.Location = new System.Drawing.Point(748, 75);
-            this.buttonMountConnect.Name = "buttonMountConnect";
-            this.buttonMountConnect.Size = new System.Drawing.Size(40, 23);
-            this.buttonMountConnect.TabIndex = 11;
-            this.buttonMountConnect.UseVisualStyleBackColor = false;
-            this.buttonMountConnect.Click += new System.EventHandler(this.buttonMountConnect_Click);
             // 
             // labelMount
             // 
@@ -321,7 +254,7 @@ namespace TelescopeMountBackslashMeasurement
             this.checkBoxSetReference.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
             this.checkBoxSetReference.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
             this.checkBoxSetReference.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxSetReference.Location = new System.Drawing.Point(13, 191);
+            this.checkBoxSetReference.Location = new System.Drawing.Point(11, 233);
             this.checkBoxSetReference.Name = "checkBoxSetReference";
             this.checkBoxSetReference.Size = new System.Drawing.Size(84, 23);
             this.checkBoxSetReference.TabIndex = 22;
@@ -337,7 +270,7 @@ namespace TelescopeMountBackslashMeasurement
             this.checkBoxMeasure.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
             this.checkBoxMeasure.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(119)))));
             this.checkBoxMeasure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxMeasure.Location = new System.Drawing.Point(12, 283);
+            this.checkBoxMeasure.Location = new System.Drawing.Point(11, 471);
             this.checkBoxMeasure.Name = "checkBoxMeasure";
             this.checkBoxMeasure.Size = new System.Drawing.Size(57, 23);
             this.checkBoxMeasure.TabIndex = 23;
@@ -371,9 +304,9 @@ namespace TelescopeMountBackslashMeasurement
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelScrollArea.AutoScroll = true;
             this.panelScrollArea.Controls.Add(this.picImage);
-            this.panelScrollArea.Location = new System.Drawing.Point(119, 12);
+            this.panelScrollArea.Location = new System.Drawing.Point(127, 12);
             this.panelScrollArea.Name = "panelScrollArea";
-            this.panelScrollArea.Size = new System.Drawing.Size(392, 650);
+            this.panelScrollArea.Size = new System.Drawing.Size(384, 650);
             this.panelScrollArea.TabIndex = 26;
             // 
             // buttonRABackslash
@@ -382,11 +315,11 @@ namespace TelescopeMountBackslashMeasurement
             this.buttonRABackslash.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
             this.buttonRABackslash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRABackslash.ForeColor = System.Drawing.Color.Silver;
-            this.buttonRABackslash.Location = new System.Drawing.Point(12, 238);
+            this.buttonRABackslash.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Telescope;
+            this.buttonRABackslash.Location = new System.Drawing.Point(11, 307);
             this.buttonRABackslash.Name = "buttonRABackslash";
             this.buttonRABackslash.Size = new System.Drawing.Size(100, 23);
             this.buttonRABackslash.TabIndex = 27;
-            this.buttonRABackslash.Text = "move mount";
             this.buttonRABackslash.UseVisualStyleBackColor = false;
             this.buttonRABackslash.Click += new System.EventHandler(this.buttonRABackslash_Click);
             // 
@@ -406,9 +339,9 @@ namespace TelescopeMountBackslashMeasurement
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(523, 248);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 28;
-            this.label8.Text = "Difference RA:";
+            this.label8.Text = "Difference X:";
             // 
             // labelDiffDEC
             // 
@@ -426,9 +359,130 @@ namespace TelescopeMountBackslashMeasurement
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(523, 266);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
+            this.label10.Size = new System.Drawing.Size(69, 13);
             this.label10.TabIndex = 30;
-            this.label10.Text = "Difference DEC:";
+            this.label10.Text = "Difference Y:";
+            // 
+            // picImage
+            // 
+            this.picImage.Location = new System.Drawing.Point(13, 3);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(363, 530);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picImage.TabIndex = 7;
+            this.picImage.TabStop = false;
+            this.picImage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picImage_MouseClick);
+            this.picImage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picImage_MouseMove);
+            // 
+            // buttonMountConnect
+            // 
+            this.buttonMountConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMountConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
+            this.buttonMountConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
+            this.buttonMountConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMountConnect.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Off;
+            this.buttonMountConnect.Location = new System.Drawing.Point(748, 75);
+            this.buttonMountConnect.Name = "buttonMountConnect";
+            this.buttonMountConnect.Size = new System.Drawing.Size(40, 23);
+            this.buttonMountConnect.TabIndex = 11;
+            this.buttonMountConnect.UseVisualStyleBackColor = false;
+            this.buttonMountConnect.Click += new System.EventHandler(this.buttonMountConnect_Click);
+            // 
+            // picZoom
+            // 
+            this.picZoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picZoom.Location = new System.Drawing.Point(520, 424);
+            this.picZoom.Name = "picZoom";
+            this.picZoom.Size = new System.Drawing.Size(268, 238);
+            this.picZoom.TabIndex = 8;
+            this.picZoom.TabStop = false;
+            // 
+            // buttonExposure
+            // 
+            this.buttonExposure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
+            this.buttonExposure.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
+            this.buttonExposure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExposure.ForeColor = System.Drawing.Color.Silver;
+            this.buttonExposure.Image = ((System.Drawing.Image)(resources.GetObject("buttonExposure.Image")));
+            this.buttonExposure.Location = new System.Drawing.Point(11, 158);
+            this.buttonExposure.Name = "buttonExposure";
+            this.buttonExposure.Size = new System.Drawing.Size(100, 23);
+            this.buttonExposure.TabIndex = 6;
+            this.buttonExposure.UseVisualStyleBackColor = false;
+            this.buttonExposure.Click += new System.EventHandler(this.buttonExposure_Click);
+            // 
+            // buttonCameraConnect
+            // 
+            this.buttonCameraConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCameraConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
+            this.buttonCameraConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
+            this.buttonCameraConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCameraConnect.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Off;
+            this.buttonCameraConnect.Location = new System.Drawing.Point(748, 29);
+            this.buttonCameraConnect.Name = "buttonCameraConnect";
+            this.buttonCameraConnect.Size = new System.Drawing.Size(40, 23);
+            this.buttonCameraConnect.TabIndex = 2;
+            this.buttonCameraConnect.UseVisualStyleBackColor = false;
+            this.buttonCameraConnect.Click += new System.EventHandler(this.buttonCameraConnect_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 217);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 13);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "2. Set reference point:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 291);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "3. Move the mount:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "1. Take a picture";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 373);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "4. Take a picture:";
+            // 
+            // buttonExposure2
+            // 
+            this.buttonExposure2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(0)))), ((int)(((byte)(186)))));
+            this.buttonExposure2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(67)))), ((int)(((byte)(61)))));
+            this.buttonExposure2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExposure2.ForeColor = System.Drawing.Color.Silver;
+            this.buttonExposure2.Image = ((System.Drawing.Image)(resources.GetObject("buttonExposure2.Image")));
+            this.buttonExposure2.Location = new System.Drawing.Point(11, 389);
+            this.buttonExposure2.Name = "buttonExposure2";
+            this.buttonExposure2.Size = new System.Drawing.Size(100, 23);
+            this.buttonExposure2.TabIndex = 36;
+            this.buttonExposure2.UseVisualStyleBackColor = false;
+            this.buttonExposure2.Click += new System.EventHandler(this.buttonExposure_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 455);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "5. Measure distance:";
             // 
             // FormMain
             // 
@@ -436,6 +490,12 @@ namespace TelescopeMountBackslashMeasurement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(48)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(800, 674);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.buttonExposure2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.labelDiffDEC);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelDiffRA);
@@ -461,7 +521,6 @@ namespace TelescopeMountBackslashMeasurement
             this.Controls.Add(this.buttonChooseMount);
             this.Controls.Add(this.picZoom);
             this.Controls.Add(this.buttonExposure);
-            this.Controls.Add(this.checkBoxLoop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxExposure);
             this.Controls.Add(this.buttonCameraConnect);
@@ -471,11 +530,11 @@ namespace TelescopeMountBackslashMeasurement
             this.Name = "FormMain";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.picZoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trbZoomFactor)).EndInit();
             this.panelScrollArea.ResumeLayout(false);
             this.panelScrollArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picZoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,7 +547,6 @@ namespace TelescopeMountBackslashMeasurement
         private System.Windows.Forms.Button buttonCameraConnect;
         private System.Windows.Forms.TextBox textBoxExposure;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBoxLoop;
         private System.Windows.Forms.Button buttonExposure;
         private System.ComponentModel.BackgroundWorker backgroundWorkerExposure;
         private System.Windows.Forms.PictureBox picImage;
@@ -516,6 +574,12 @@ namespace TelescopeMountBackslashMeasurement
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelDiffDEC;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button buttonExposure2;
+        private System.Windows.Forms.Label label13;
     }
 }
 

@@ -86,6 +86,7 @@ namespace TelescopeMountBackslashMeasurement
 
             UpdateAscomDeviceLabels();
             EnableCameraControls(false);
+            EnableMountControls(false);
             _OriginalImage = Bitmap.FromFile("Beteigeuze_Spectrum_-20.00_0.30s_0000.png");
             _WorkingImage = (System.Drawing.Image)_OriginalImage.Clone();
             ResizeAndDisplayImage();
@@ -94,7 +95,6 @@ namespace TelescopeMountBackslashMeasurement
         #region ASCOM
         private void EnableCameraControls(bool en)
         {
-            checkBoxLoop.Enabled = en;
             textBoxExposure.Enabled = en;
             buttonExposure.Enabled = en;
             if (en)
@@ -124,12 +124,20 @@ namespace TelescopeMountBackslashMeasurement
         {
             if(en)
             {
+                checkBoxMeasure.Enabled = en;
+                checkBoxSetReference.Enabled = en;
+                buttonRABackslash.Enabled = en;
+
                 labelFocallength.Text = (_mount.FocalLength * 1000).ToString(System.Globalization.CultureInfo.InvariantCulture) + " mm";
                 labelDiameter.Text = (_mount.ApertureDiameter * 1000).ToString(System.Globalization.CultureInfo.InvariantCulture) + " mm";
                 _resolution = PixelResolution();
             }
             else
             {
+                checkBoxMeasure.Enabled = en;
+                checkBoxSetReference.Enabled = en;
+                buttonRABackslash.Enabled = en;
+
                 labelFocallength.Text = "...";
                 labelDiameter.Text = "...";
                 labelResolution.Text = "...";
@@ -323,6 +331,7 @@ namespace TelescopeMountBackslashMeasurement
             this.Invoke((MethodInvoker)delegate
             {
                 this.buttonExposure.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Stop;
+                this.buttonExposure2.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Stop;
             });
             _camera.StartExposure(_exposure, true);
             while (!_camera.ImageReady)
@@ -333,6 +342,7 @@ namespace TelescopeMountBackslashMeasurement
             this.Invoke((MethodInvoker)delegate
             {
                 this.buttonExposure.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Exposure;
+                this.buttonExposure2.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Exposure;
                 DisplayImage(imgArray);
             });
             
@@ -586,13 +596,17 @@ namespace TelescopeMountBackslashMeasurement
         {
             if (_mount == null) return;
             if (_mount.Connected == false) return;
+
+            this.buttonRABackslash.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Stop;
             if (_mount.CanUnpark)
-                _mount.Unpark();
+                if(_mount.AtPark)
+                    _mount.Unpark();
             _mount.Tracking = false;
             double alt = _mount.Altitude;
             double az = _mount.Azimuth;
-            _mount.SlewToAltAz(az + 1.0, alt + 1.0);
+            _mount.SlewToAltAz(az + 2.0, alt + 2.0);
             _mount.SlewToAltAz(az, alt);
+            this.buttonRABackslash.Image = global::TelescopeMountBackslashMeasurement.Properties.Resources.Telescope;
         }
     }
 }
