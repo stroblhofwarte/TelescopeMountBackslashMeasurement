@@ -36,11 +36,15 @@ DEC axis (remember the precondition step which axis is RA and which is DEC). Fil
 mount setup (e.g. OnStep supports this) and repeat this steps to check if your backslash is gone.
 
 ![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen1.png)
+Here a branch is used as "landmark". It is not a good idea to use a branch as reference point if it is windy!
 
 ![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen2.png)
-
+The branch is marked (yellow cross).
 
 ![alt text](https://github.com/stroblhofwarte/TelescopeMountBackslashMeasurement/blob/main/ScreenShots/Screen3.png)
+The branch is re-marked after the telescope move. The X difference is 71.49'' and Y 36.01''. 
+
+I filled this into the mount settings tab (ASCOM) and from this point the "branch" returns back to the old position! 
 
 # Development
 
